@@ -7,7 +7,8 @@ Internal Stencil properties like `s-p`, `s-rc`, and `__stencil__getHostRef` are 
 
 This results in:
 1. **Polluted Snapshots:** Every web component snapshot now contains unstable internal state.
-2. **Gigantic Error Logs:** Matcher failures (like `toHaveTextContent`) now serialize the entire element instance, including the internal **React Fiber tree** (which becomes enumerable as a result of the Stencil property changes).
+2. **Broken Matchers:** Matchers like `toHaveTextContent` **fail to find the expected text** on the element because the enumerable expandos interfere with how the testing library reads the element's prototype and content.
+3. **Gigantic Error Logs:** Matcher failures now serialize the entire element instance, including the internal **React Fiber tree** (which becomes enumerable as a result of the Stencil property changes).
 
 ---
 
@@ -15,11 +16,11 @@ This results in:
 
 ### [GOOD] `ionic-8.5.0-good`
 - **Ionic React:** `8.5.0`
-- **Result:** Internal Stencil properties are **hidden** (non-enumerable). Snapshots are clean.
+- **Result:** Internal Stencil properties are **hidden** (non-enumerable). Snapshots are clean and `toHaveTextContent` works as expected.
 
 ### [BAD] `ionic-8.8.1-bad`
 - **Ionic React:** `8.8.1`
-- **Result:** Internal Stencil properties are **enumerable**. Snapshots are polluted.
+- **Result:** Internal Stencil properties are **enumerable**. Snapshots are polluted and **`toHaveTextContent` fails.**
 
 ---
 

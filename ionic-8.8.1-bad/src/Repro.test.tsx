@@ -1,3 +1,4 @@
+import '@testing-library/jest-dom';
 import { IonButton } from '@ionic/react'
 import { render } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
