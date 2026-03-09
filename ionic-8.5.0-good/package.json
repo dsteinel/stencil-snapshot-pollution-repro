@@ -1,0 +1,20 @@
+{
+  "name": "ionic-8.5.0-baseline",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@ionic/react": "8.5.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "ionicons": "^7.4.0"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^16.2.0",
+    "jsdom": "^22.1.0",
+    "vitest": "^0.34.6",
+    "@vitejs/plugin-react": "^4.0.1"
+  }
+}
