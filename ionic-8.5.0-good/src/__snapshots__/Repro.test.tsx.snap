@@ -1,7 +1,0 @@
-// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
-
-exports[`Stencil Expando Repro - Baseline (8.5.0) > clean snapshot demo 1`] = `
-<ion-button>
-  Test
-</ion-button>
-`;
