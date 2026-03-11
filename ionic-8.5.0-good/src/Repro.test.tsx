@@ -7,6 +7,7 @@ describe('Stencil Expando Repro - Baseline (8.5.0)', () => {
   it('should verify toHaveTextContent behavior', () => {
     const { container } = render(<IonButton>Test</IonButton>)
     const button = container.querySelector('ion-button')
+    expect(button).toMatchSnapshot()
     expect(button).toHaveTextContent('Test')
   })
 })

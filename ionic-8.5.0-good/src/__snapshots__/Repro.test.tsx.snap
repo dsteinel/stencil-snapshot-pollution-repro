@@ -1,0 +1,7 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Stencil Expando Repro - Baseline (8.5.0) > should verify toHaveTextContent behavior 1`] = `
+<ion-button>
+  Test
+</ion-button>
+`;
